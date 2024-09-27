@@ -14,6 +14,9 @@ const config: Config = {
         "very-dark-blue": "var(--very-dark-blue)",
         "mustard-yellow": "var(--mustard-yellow)",
       },
+      backgroundImage: {
+        "scale-pattern": "url('https://pub-94dc47df391c4556bac5370df0514d7d.r2.dev/scale-bg.png')",
+      }
     },
   },
   plugins: [],

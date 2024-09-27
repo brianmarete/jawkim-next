@@ -3,7 +3,7 @@ import { poppins } from "@/app/ui/fonts";
 
 const Hero = () => {
   return (
-    <section className="relative h-screen">
+    <section className="relative h-screen -mt-10 -z-10">
       <div className="image-container">
         <Image
           src="https://pub-94dc47df391c4556bac5370df0514d7d.r2.dev/bg-jawkim.jpg"
@@ -47,11 +47,6 @@ const Hero = () => {
           ))}
         </div>
       </div>
-      <button className="absolute bottom-1/2 right-4 transform translate-y-1/2 bg-white bg-opacity-50 p-2 rounded-full">
-        <div className="w-6 h-6 bg-gray-900 rounded-full flex items-center justify-center">
-          <span className="text-white font-bold">&gt;</span>
-        </div>
-      </button>
     </section>
   );
 };
