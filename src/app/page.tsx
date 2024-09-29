@@ -9,11 +9,11 @@ export default function Home() {
       <main className={workSans.className}>
         <Hero />
         {/* ABOUT US */}
-        {/* <section className="container mx-auto px-36 py-16">
-          <div className="flex flex-col md:flex-row items-center">
+        <section className="">
+          <div className="container mx-auto max-w-7xl my-8 flex flex-col md:flex-row items-center p-4">
             <div className="md:w-1/2 md:pr-8 mb-8 md:mb-0">
               <h2
-                className={`text-6xl text-gray-800 font-bold mb-4 ${poppins.className}`}
+                className={`text-3xl md:text-6xl text-gray-800 font-bold mb-4 ${poppins.className}`}
               >
                 ABOUT US
               </h2>
@@ -27,18 +27,19 @@ export default function Home() {
               </p>
               <button className="styled-button">LEARN MORE</button>
             </div>
-            <div className="md:w-1/2 relative px-5">
-              <div className="absolute -left-1 -top-5 w-[80%] h-[98%] border-8 border-gray-200"></div>
-              <Image
-                src="https://pub-94dc47df391c4556bac5370df0514d7d.r2.dev/featured-image-1.jpg"
-                alt="Architectural Project"
-                width={500}
-                height={300}
-                className="relative z-10"
-              />
+            <div className="m-4">
+              <div className="relative before:absolute before:w-full before:h-full before:-left-5 before:-top-5 before:border-8 before:border-gray-200 before:-z-10">
+                <Image
+                  src="/images/featured-image-1.jpg"
+                  alt="Architectural Project"
+                  width={500}
+                  height={300}
+                  className="relative"
+                />
+              </div>
             </div>
           </div>
-        </section> */}
+        </section>
 
         {/* <section>
           <div className="grid grid-cols-1 md:grid-cols-2 h-[85vh] slanted-clip-path">
