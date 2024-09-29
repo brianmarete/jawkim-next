@@ -16,7 +16,11 @@ const config: Config = {
       },
       backgroundImage: {
         "scale-pattern": "url('https://pub-94dc47df391c4556bac5370df0514d7d.r2.dev/scale-bg.png')",
-      }
+      },
+      animation: {
+        // Bounces 5 times 1s equals 5 seconds
+        'bounce-short': 'bounce 1s ease-in-out 3'
+      },
     },
   },
   plugins: [],

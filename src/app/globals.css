@@ -82,6 +82,7 @@ body {
   display: inline-block;
   position: relative;
 }
+
 .image-container::after {
   content: "";
   position: absolute;
@@ -90,5 +91,5 @@ body {
   top: 0;
   left: 0;
   background-image: radial-gradient(var(--very-dark-blue) 1px, transparent 1px);
-  background-size: 3px 3px;
+  background-size: 2px 2px;
 }

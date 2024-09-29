@@ -9,7 +9,7 @@ export default function Home() {
       <main className={workSans.className}>
         <Hero />
         {/* ABOUT US */}
-        <section className="container mx-auto px-36 py-16">
+        {/* <section className="container mx-auto px-36 py-16">
           <div className="flex flex-col md:flex-row items-center">
             <div className="md:w-1/2 md:pr-8 mb-8 md:mb-0">
               <h2
@@ -38,9 +38,9 @@ export default function Home() {
               />
             </div>
           </div>
-        </section>
+        </section> */}
 
-        <section>
+        {/* <section>
           <div className="grid grid-cols-1 md:grid-cols-2 h-[85vh] slanted-clip-path">
             <div className="bg-[#1a2a3a] text-white p-12 flex flex-col justify-center pl-36">
               <h1 className={`text-6xl font-bold mb-6 ${poppins.className}`}>
@@ -68,9 +68,9 @@ export default function Home() {
               />
             </div>
           </div>
-        </section>
+        </section> */}
         {/* OUR SERVICES */}
-        <section>
+        {/* <section>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 p-12 height-[85vh] relative">
             <div className="relative md:h-auto relative">
               <Image
@@ -125,10 +125,10 @@ export default function Home() {
               )
             )}
           </div>
-        </section>
+        </section> */}
 
         {/* PROJECTS */}
-        <section className="w-full bg-white py-12">
+        {/* <section className="w-full bg-white py-12">
           <div className="container mx-auto px-4">
             <h2 className="text-4xl font-bold text-center mb-8">OUR WORK</h2>
             <nav className="flex justify-center space-x-6 mb-8">
@@ -201,7 +201,7 @@ export default function Home() {
               </Link>
             </div>
           </div>
-        </section>
+        </section> */}
       </main>
     </div>
   );
