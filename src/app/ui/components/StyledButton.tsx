@@ -17,7 +17,7 @@ const StyledButton = ({
     <Link
       href={route}
       className={clsx(
-        "inline-block px-5 py-3 max-w-fit text-sm font-semibold relative border border-solid after:absolute after:w-[105%] after:h-0.5 after:left-2 after:-bottom-1.5 before:absolute before:w-0.5 before:h-[115%] before:top-2 before:-right-1.5 transform hover:scale-105 transition duration-300",
+        "inline-block px-5 py-3 max-w-fit text-sm font-semibold uppercase relative border border-solid after:absolute after:w-[105%] after:h-0.5 after:left-2 after:-bottom-1.5 before:absolute before:w-0.5 before:h-[115%] before:top-2 before:-right-1.5 transform hover:scale-105 transition duration-300",
         {
           "bg-very-dark-blue border-white after:bg-white before:bg-white":
             isPrimary,

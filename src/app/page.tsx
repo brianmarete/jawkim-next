@@ -1,8 +1,9 @@
 import Image from "next/image";
-import Link from "next/link";
 import { poppins, workSans } from "@/app/ui/fonts";
 import Hero from "@/app/ui/components/Hero";
 import StyledButton from "./ui/components/StyledButton";
+import ImageContainer from "./ui/components/ImageContainer";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -27,11 +28,11 @@ export default function Home() {
                 innovation.
               </p>
               <StyledButton route="/about" type="secondary">
-                LEARN MORE
+                Learn more
               </StyledButton>
             </div>
             <div className="m-4">
-              <div className="relative before:absolute before:w-full before:h-full before:-left-5 before:-top-5 before:border-8 before:border-gray-300 before:-z-10">
+              <ImageContainer>
                 <Image
                   src="/images/featured-image-1.jpg"
                   alt="Architectural Project"
@@ -39,7 +40,7 @@ export default function Home() {
                   height={300}
                   className="relative"
                 />
-              </div>
+              </ImageContainer>
             </div>
           </div>
         </section>
@@ -62,22 +63,22 @@ export default function Home() {
                 across the country.
               </p>
               <StyledButton route="#" type="primary">
-                CONTACT US
+                Explore our portfolio
               </StyledButton>
             </div>
-            <div className="relative hidden md:block h-[400px] md:h-auto bg-[url('/images/featured-image-2.png')] bg-no-repeat bg-cover bg-center"></div>
+            <div className="relative hidden md:block h-[400px] md:h-auto bg-bishop-magua bg-no-repeat bg-cover bg-center"></div>
           </div>
         </section>
         {/* OUR SERVICES */}
-        {/* <section>
+        <section>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 p-12 height-[85vh] relative">
-            <div className="relative md:h-auto relative">
+            <div className="relative h-48">
               <Image
-                src="https://pub-94dc47df391c4556bac5370df0514d7d.r2.dev/featured-image-3.jpg"
+                src="/images/featured-image-3.png"
                 alt="Modern house"
                 width={500}
                 height={300}
-                className="absolute right-0 -top-32"
+                className="absolute right-0 -top-24 md:-top-32"
               />
             </div>
             <div className="flex flex-col justify-center h-[500px]">
@@ -87,14 +88,14 @@ export default function Home() {
                 OUR SERVICES
               </h2>
               <p className="mb-6 w-3/4 leading-8 text-gray-600">
-                They&apos;ll have to make the best of things its an uphill
-                climb. And we&apos;ll do it our way yes our way. Make all our
-                dreams come true for me and you. So get a witch&apos;s shawl on
-                a broomstick you can crawl on.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. At ab
+                repudiandae, perferendis quae odit debitis ullam totam obcaecati
+                corporis atque illum dolore libero iure quo perspiciatis quis
+                fugiat, facilis officiis!
               </p>
-              <button className="styled-button w-auto grow-0 self-start">
-                GET A QUOTE
-              </button>
+              <StyledButton route="/services" type="secondary">
+                Read more
+              </StyledButton>
             </div>
           </div>
 
@@ -113,21 +114,14 @@ export default function Home() {
                     />
                   </div>
                   <h3 className="text-xl font-semibold mb-2">{service}</h3>
-                  <p className="mb-4">
-                    Flying away on a wing and a prayer. Who could it be? Believe
-                    it or not its just me.
-                  </p>
-                  <Link href="#" className="text-mustard-yellow">
-                    READ MORE →
-                  </Link>
                 </div>
               )
             )}
           </div>
-        </section> */}
+        </section>
 
         {/* PROJECTS */}
-        {/* <section className="w-full bg-white py-12">
+        <section className="w-full bg-white py-12">
           <div className="container mx-auto px-4">
             <h2 className="text-4xl font-bold text-center mb-8">OUR WORK</h2>
             <nav className="flex justify-center space-x-6 mb-8">
@@ -200,7 +194,7 @@ export default function Home() {
               </Link>
             </div>
           </div>
-        </section> */}
+        </section>
       </main>
     </div>
   );

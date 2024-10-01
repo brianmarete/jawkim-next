@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { workSans } from "@/app/ui/fonts";
 import Logo from "@/app/ui/components/Logo";
 
@@ -10,8 +11,33 @@ import { MdClose } from "react-icons/md";
 import { MdOutlineMenu } from "react-icons/md";
 
 import { useState, useEffect } from "react";
+import clsx from "clsx";
 
 const Menu = () => {
+  const links = [
+    {
+      name: "Home",
+      href: "/",
+    },
+    {
+      name: "About us",
+      href: "/about",
+    },
+    {
+      name: "Our services",
+      href: "/services",
+    },
+    {
+      name: "Blog",
+      href: "#",
+    },
+    {
+      name: "Contact us",
+      href: "/contact",
+    },
+  ];
+
+  const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => setIsOpen(!isOpen);
@@ -60,21 +86,26 @@ const Menu = () => {
       </div>
 
       <div className="bg-very-dark-blue mx-auto px-4 py-4 flex justify-between items-center text-white max-w-7xl md:rounded-b-md md:before:absolute md:before:inset-0 md:before:bg-white md:before:bg-scale-pattern md:before:bg-bottom md:before:bg-repeat-x md:before:z-[-1] md:before:h-32">
-        <Logo />
+        <Link href="/">
+          <Logo />
+        </Link>
         <nav className="hidden md:block">
           <ul className="flex space-x-12 text-sm ">
-            {["HOME", "ABOUT US", "OUR SERVICES", "BLOG", "CONTACT US"].map(
-              (item) => (
-                <li key={item}>
-                  <Link
-                    href="#"
-                    className="hover:text-yellow-400 transition-colors"
-                  >
-                    {item}
-                  </Link>
-                </li>
-              )
-            )}
+            {links.map((item, index) => (
+              <li key={index}>
+                <Link
+                  href={item.href}
+                  className={clsx(
+                    "hover:text-mustard-yellow transition-colors uppercase",
+                    {
+                      "text-mustard-yellow": pathname === item.href,
+                    }
+                  )}
+                >
+                  {item.name}
+                </Link>
+              </li>
+            ))}
           </ul>
         </nav>
         <button
@@ -97,18 +128,22 @@ const Menu = () => {
             <MdClose className="text-4xl" />
           </button>
           <ul className="space-y-1 px-4">
-            {["HOME", "ABOUT US", "OUR SERVICES", "BLOG", "CONTACT US"].map(
-              (item) => (
-                <li key={item}>
-                  <Link
-                    href="#"
-                    className="text-white hover:text-mustard-yellow block px-3 py-2 rounded-md text-base font-medium"
-                  >
-                    {item}
-                  </Link>
-                </li>
-              )
-            )}
+            {links.map((item, index) => (
+              <li key={index}>
+                <Link
+                  href={item.href}
+                  onClick={() => setIsOpen(false)}
+                  className={clsx(
+                    "text-white hover:text-mustard-yellow block px-3 py-2 rounded-md text-base font-medium uppercase",
+                    {
+                      "text-mustard-yellow": pathname === item.href,
+                    }
+                  )}
+                >
+                  {item.name}
+                </Link>
+              </li>
+            ))}
           </ul>
           <ul className="absolute bottom-8">
             <li className="px-4 py-2 text-gray-400 block">

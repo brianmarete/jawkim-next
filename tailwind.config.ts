@@ -15,7 +15,9 @@ const config: Config = {
         "mustard-yellow": "var(--mustard-yellow)",
       },
       backgroundImage: {
-        "scale-pattern": "url('https://pub-94dc47df391c4556bac5370df0514d7d.r2.dev/scale-bg.png')",
+        "scale-pattern": "url('/images/scale-bg.png')",
+        "hero-image": "url('/images/bg-hero.png')",
+        "bishop-magua": "url('/images/featured-image-2.png')"
       },
       animation: {
         // Bounces 5 times 1s equals 5 seconds
