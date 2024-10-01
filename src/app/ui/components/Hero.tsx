@@ -5,7 +5,7 @@ const Hero = () => {
   return (
     <section className="relative h-[90vh] -mt-10 -z-10">
       <div className="image-container h-full  w-full">
-        <div className="hero-image bg-[url('https://pub-94dc47df391c4556bac5370df0514d7d.r2.dev/bg-jawkim.jpg')] bg-no-repeat bg-cover h-full w-full"></div>
+        <div className="bg-[url('/images/bg-hero.jpg')] bg-no-repeat bg-cover h-full w-full"></div>
       </div>
       <div className="absolute inset-0 flex flex-col justify-center items-center text-white ">
         <span className="bg-mustard-yellow text-gray-900 px-4 py-2 mb-4 text-sm font-semibold">

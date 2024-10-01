@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { poppins, workSans } from "@/app/ui/fonts";
 import Hero from "@/app/ui/components/Hero";
+import StyledButton from "./ui/components/StyledButton";
 
 export default function Home() {
   return (
@@ -25,10 +26,12 @@ export default function Home() {
                 standing on the principles of experience, integrity, and
                 innovation.
               </p>
-              <button className="styled-button">LEARN MORE</button>
+              <StyledButton route="/about" type="secondary">
+                LEARN MORE
+              </StyledButton>
             </div>
             <div className="m-4">
-              <div className="relative before:absolute before:w-full before:h-full before:-left-5 before:-top-5 before:border-8 before:border-gray-200 before:-z-10">
+              <div className="relative before:absolute before:w-full before:h-full before:-left-5 before:-top-5 before:border-8 before:border-gray-300 before:-z-10">
                 <Image
                   src="/images/featured-image-1.jpg"
                   alt="Architectural Project"
@@ -41,10 +44,12 @@ export default function Home() {
           </div>
         </section>
 
-        {/* <section>
+        <section>
           <div className="grid grid-cols-1 md:grid-cols-2 h-[85vh] slanted-clip-path">
-            <div className="bg-[#1a2a3a] text-white p-12 flex flex-col justify-center pl-36">
-              <h1 className={`text-6xl font-bold mb-6 ${poppins.className}`}>
+            <div className="bg-very-dark-blue text-white p-12 flex flex-col justify-center">
+              <h1
+                className={`text-3xl md:text-6xl font-bold mb-6 ${poppins.className}`}
+              >
                 WE SHAPE LANDMARKS
               </h1>
               <p className="mb-8 leading-8">
@@ -56,20 +61,13 @@ export default function Home() {
                 envisioned projects that have become iconic landmarks to people
                 across the country.
               </p>
-              <Link href="#" className="self-start">
+              <StyledButton route="#" type="primary">
                 CONTACT US
-              </Link>
+              </StyledButton>
             </div>
-            <div className="relative h-[400px] md:h-auto">
-              <Image
-                src="https://pub-94dc47df391c4556bac5370df0514d7d.r2.dev/featured-image-2.png"
-                alt="City skyline"
-                layout="fill"
-                objectFit="cover"
-              />
-            </div>
+            <div className="relative hidden md:block h-[400px] md:h-auto bg-[url('/images/featured-image-2.png')] bg-no-repeat bg-cover bg-center"></div>
           </div>
-        </section> */}
+        </section>
         {/* OUR SERVICES */}
         {/* <section>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 p-12 height-[85vh] relative">
