@@ -21,7 +21,9 @@ const Contact = () => {
 
       <main className="flex-grow bg-white p-8">
         <section className="container mx-auto max-w-6xl">
-          <APIProvider apiKey={process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}>
+          <APIProvider
+            apiKey={process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY as string}
+          >
             <Map
               style={{ width: "100%", height: "400px" }}
               defaultCenter={markerPosition}
