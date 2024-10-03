@@ -3,7 +3,7 @@ import { Work_Sans, Poppins } from 'next/font/google';
 
 export const workSans = Work_Sans({
   subsets: ["latin"],
-  weight: ["400", "500"]
+  weight: ["300", "400", "500"]
 });
 
 export const poppins = Poppins({

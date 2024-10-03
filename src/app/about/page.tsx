@@ -1,9 +1,28 @@
-import React from "react";
 import Image from "next/image";
+import { poppins, workSans } from "../ui/fonts";
+import ImageContainer from "../ui/components/ImageContainer";
 
 const About = () => {
+  const teamMembers = [
+    {
+      name: "Gabriel Mwangi",
+      title: "CEO & Founder",
+      imageUrl: "https://pub-94dc47df391c4556bac5370df0514d7d.r2.dev/guy2.jpg",
+    },
+    {
+      name: "Ben Kuria",
+      title: "Architect",
+      imageUrl: "https://pub-94dc47df391c4556bac5370df0514d7d.r2.dev/guy1.jpg",
+    },
+    {
+      name: "Kaimuri Munene",
+      title: "Communications Director",
+      imageUrl: "https://pub-94dc47df391c4556bac5370df0514d7d.r2.dev/guy3.jpg",
+    },
+  ];
+
   return (
-    <div className="font-sans">
+    <main className={workSans.className}>
       {/* Hero Section */}
       <div className="relative h-64 bg-gray-800">
         <Image
@@ -13,38 +32,45 @@ const About = () => {
           objectFit="cover"
           className="opacity-50"
         />
-        <h1 className="absolute inset-0 flex items-center justify-center text-4xl font-bold text-white">
+        <h1
+          className={`absolute inset-0 flex items-center justify-center text-4xl font-bold text-white ${poppins.className}`}
+        >
           ABOUT US
         </h1>
       </div>
 
       {/* Welcome Section */}
-      <div className="container mx-auto px-4 py-12">
+      <div className="container mx-auto max-w-7xl px-4 py-12">
         <div className="flex flex-col md:flex-row gap-8">
           <div className="md:w-1/2">
-            <h2 className="text-3xl font-bold mb-4">WELCOME TO JAWKIM</h2>
-            <p className="text-gray-600 mb-4">
-              At JAWKIM Architects, we are storytellers of our country&apos;s
-              ever-evolving landscape. With a legacy of excellence spanning 25
-              years, we bring our passion for innovative design and urban
-              transformation. We&apos;ve played a pivotal role in shaping
-              skylines across the nation with our signature of experience,
-              integrity, and innovation.
-            </p>
-            <p className="text-gray-600 mb-4">
-              Founded in 1998, our architectural journey began with a passion
-              for creating spaces that inspire hope and define our cities. Over
-              the years, we&apos;ve cultivated an unwavering reputation for
-              being a part of the cornerstone of Kenya&apos;s architectural
-              landscape. We&apos;ve designed and built award-winning projects
-              that have become iconic landmarks in people across the country.
-            </p>
-            <p className="text-gray-600">
-              Our commitment to excellence is our driving force. We&apos;ve
-              worked tirelessly to create spaces that stand the test of time,
-              ensuring that our client&apos;s dreams not only come to life but
-              endure.
-            </p>
+            <h2 className={`text-3xl font-bold mb-4 ${poppins.className}`}>
+              WELCOME TO JAWKIM
+            </h2>
+            <div className="text-gray-500 font-normal leading-8">
+              <p className="mb-5">
+                At JAWKIM Architects, we are storytellers of our country&apos;s
+                ever-evolving landscape. With a legacy of excellence spanning 25
+                years, we bring our passion for innovative design and urban
+                transformation. We&apos;ve played a pivotal role in shaping
+                skylines across the nation with our signature of experience,
+                integrity, and innovation.
+              </p>
+              <p className="mb-5">
+                Founded in 1998, our architectural journey began with a passion
+                for creating spaces that inspire hope and define our cities.
+                Over the years, we&apos;ve cultivated an unwavering reputation
+                for being a part of the cornerstone of Kenya&apos;s
+                architectural landscape. We&apos;ve designed and built
+                award-winning projects that have become iconic landmarks in
+                people across the country.
+              </p>
+              <p>
+                Our commitment to excellence is our driving force. We&apos;ve
+                worked tirelessly to create spaces that stand the test of time,
+                ensuring that our client&apos;s dreams not only come to life but
+                endure.
+              </p>
+            </div>
           </div>
           <div className="md:w-1/2 space-y-4">
             <Image
@@ -66,7 +92,7 @@ const About = () => {
       </div>
 
       {/* Statistics Section */}
-      <div className="bg-yellow-400 py-12">
+      <div className="bg-yellow-400 py-12 text-white">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div>
@@ -101,24 +127,29 @@ const About = () => {
             />
           </div>
           <div className="md:w-1/2">
-            <h2 className="text-3xl font-bold mb-6">Why choose us</h2>
-            <ul className="space-y-4">
+            <h2
+              className={`text-3xl font-bold mb-6 ${poppins.className} uppercase`}
+            >
+              Why choose us
+            </h2>
+            <ul className="space-y-4 font-normal text-gray-500">
               <li>
-                <strong className="text-lg">Experience:</strong> With decades of
-                experience, we bring a depth of knowledge and expertise to every
-                project.
+                <strong className="text-lg text-gray-800">Experience:</strong>{" "}
+                With decades of experience, we bring a depth of knowledge and
+                expertise to every project.
               </li>
               <li>
-                <strong className="text-lg">Reliability:</strong> Our reputation
-                for honesty and integrity is the cornerstone of our success.
+                <strong className="text-lg text-gray-800">Reliability:</strong>{" "}
+                Our reputation for honesty and integrity is the cornerstone of
+                our success.
               </li>
               <li>
-                <strong className="text-lg">Dedication:</strong> We are fully
-                devoted to every project, ensuring personalized, dedicated
-                service.
+                <strong className="text-lg text-gray-800">Dedication:</strong>{" "}
+                We are fully devoted to every project, ensuring personalized,
+                dedicated service.
               </li>
               <li>
-                <strong className="text-lg">
+                <strong className="text-lg text-gray-800">
                   Innovation and Sustainability:
                 </strong>{" "}
                 We&apos;re committed to embracing the latest innovations,
@@ -126,8 +157,9 @@ const About = () => {
                 impact.
               </li>
               <li>
-                <strong className="text-lg">Quality:</strong> We deliver quality
-                work and building solutions that stand the test of time.
+                <strong className="text-lg text-gray-800">Quality:</strong> We
+                deliver quality work and building solutions that stand the test
+                of time.
               </li>
             </ul>
           </div>
@@ -136,40 +168,36 @@ const About = () => {
 
       {/* Team Section */}
       <div className="bg-gray-100 py-12">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-8">
-            OUR GREAT TEAM
+        <div className="container mx-auto max-w-6xl px-4">
+          <h2
+            className={`text-4xl font-bold text-center mb-10 uppercase ${poppins.className}`}
+          >
+            Meet the team
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {["Gabriel Mwangi", "Ben Kuria", "Kaimuii Mairne"].map(
-              (name, index) => (
-                <div key={index} className="text-center">
+            {teamMembers.map((person, index) => (
+              <div
+                key={index}
+                className="flex flex-col items-center transform hover:scale-105 transition duration-300"
+              >
+                <ImageContainer>
                   <Image
-                    src={`/placeholder.svg?height=300&width=300&text=Team+Member+${
-                      index + 1
-                    }`}
-                    alt={name}
+                    src={person.imageUrl}
+                    alt={person.name}
                     width={300}
                     height={300}
-                    className="rounded-lg mx-auto mb-4"
                   />
-                  <h3 className="text-xl font-semibold">{name}</h3>
-                  <p className="text-gray-600">Position</p>
-                  <div className="flex justify-center space-x-2 mt-2">
-                    {[...Array(4)].map((_, i) => (
-                      <span
-                        key={i}
-                        className="w-6 h-6 bg-gray-300 rounded-full"
-                      ></span>
-                    ))}
-                  </div>
-                </div>
-              )
-            )}
+                </ImageContainer>
+                <h3 className="text-xl font-semibold uppercase">
+                  {person.name}
+                </h3>
+                <p className="text-mustard-yellow">{person.title}</p>
+              </div>
+            ))}
           </div>
         </div>
       </div>
-    </div>
+    </main>
   );
 };
 

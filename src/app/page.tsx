@@ -1,9 +1,9 @@
 import Image from "next/image";
+import Link from "next/link";
 import { poppins, workSans } from "@/app/ui/fonts";
 import Hero from "@/app/ui/components/Hero";
-import StyledButton from "./ui/components/StyledButton";
-import ImageContainer from "./ui/components/ImageContainer";
-import Link from "next/link";
+import StyledButton from "@/app/ui/components/StyledButton";
+import ImageContainer from "@/app/ui/components/ImageContainer";
 
 export default function Home() {
   return (

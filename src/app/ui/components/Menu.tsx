@@ -115,9 +115,11 @@ const Menu = () => {
           <MdOutlineMenu className="text-4xl" />
         </button>
       </div>
+
+      {/* Mobile menu */}
       <nav className="block md:hidden">
         <div
-          className={`md:hidden fixed top-0 right-0 h-full w-64 pt-24 bg-very-dark-blue transform transition-transform duration-300 ease-in-out ${
+          className={`md:hidden fixed top-0 right-0 h-full w-64 pt-24 bg-very-dark-blue transform transition-transform duration-300 ease-in-out z-[999] ${
             isOpen ? "translate-x-0" : "translate-x-full"
           }`}
         >
@@ -127,14 +129,14 @@ const Menu = () => {
           >
             <MdClose className="text-4xl" />
           </button>
-          <ul className="space-y-1 px-4">
+          <ul className="space-y-1 px-4 text-white">
             {links.map((item, index) => (
               <li key={index}>
                 <Link
                   href={item.href}
                   onClick={() => setIsOpen(false)}
                   className={clsx(
-                    "text-white hover:text-mustard-yellow block px-3 py-2 rounded-md text-base font-medium uppercase",
+                    "block px-3 py-2 rounded-md text-base font-medium uppercase",
                     {
                       "text-mustard-yellow": pathname === item.href,
                     }
