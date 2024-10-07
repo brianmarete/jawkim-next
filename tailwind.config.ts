@@ -59,7 +59,7 @@ const config: Config = {
         'bishop-magua': 'url(/images/featured-image-2.png)'
       },
       animation: {
-        'bounce-short': 'bounce 1s ease-in-out 3'
+        'bounce-short': 'bounce 1s ease-in-out 10'
       },
       borderRadius: {
         lg: 'var(--radius)',

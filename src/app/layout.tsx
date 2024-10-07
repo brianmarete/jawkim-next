@@ -3,6 +3,7 @@ import "./globals.css";
 import Menu from "./ui/components/Menu";
 import Footer from "./ui/components/Footer";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { workSans } from "./ui/fonts";
 
 export const metadata: Metadata = {
   title: "Jawkim Architects",
@@ -18,7 +19,9 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <Menu />
-        {children}
+        <div className="min-h-screen">
+          <main className={workSans.className}>{children}</main>
+        </div>
         <Footer />
         <SpeedInsights />
       </body>

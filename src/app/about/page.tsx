@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { poppins, workSans } from "../ui/fonts";
+import { poppins } from "../ui/fonts";
 import ImageContainer from "../ui/components/ImageContainer";
 
 const About = () => {
@@ -22,7 +22,7 @@ const About = () => {
   ];
 
   return (
-    <main className={workSans.className}>
+    <>
       {/* Hero Section */}
       <div className="relative h-64 bg-gray-800">
         <Image
@@ -197,7 +197,7 @@ const About = () => {
           </div>
         </div>
       </div>
-    </main>
+    </>
   );
 };
 
