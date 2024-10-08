@@ -38,6 +38,37 @@ body {
   background-size: 2px 2px;
 }
 
+.TabsTrigger {
+  font-family: inherit;
+  background-color: white;
+  padding: 0 20px;
+  height: 45px;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  line-height: 1;
+  user-select: none;
+  text-transform: uppercase;
+}
+
+.TabsTrigger:hover {
+  color: var(--mustard-yellow);
+}
+
+.TabsTrigger[data-state="active"] {
+  color: var(--mustard-yellow) !important;
+  background-color: var(--very-dark-blue);
+  box-shadow: inset 0 -1px 0 0 var(--mustard-yellow),
+    0 1px 0 0 var(--mustard-yellow);
+}
+
+.TabsTrigger:focus {
+  position: relative;
+  box-shadow: 0 0 0 2px black;
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
