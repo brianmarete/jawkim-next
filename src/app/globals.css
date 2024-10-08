@@ -40,7 +40,7 @@ body {
 
 .TabsTrigger {
   font-family: inherit;
-  background-color: white;
+  background-color: transparent;
   padding: 0 20px;
   height: 45px;
   flex: 1;

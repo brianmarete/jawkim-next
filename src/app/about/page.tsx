@@ -1,39 +1,79 @@
+"use client";
+
 import Image from "next/image";
 import { poppins } from "../ui/fonts";
 import ImageContainer from "../ui/components/ImageContainer";
+import { motion } from "framer-motion";
 
 const About = () => {
   const teamMembers = [
     {
+      name: "J W Kimani",
+      title: "Founder/Chairman",
+      imageUrl: "/images/people/DSC_1778.jpg",
+    },
+    {
       name: "Gabriel Mwangi",
-      title: "CEO & Founder",
-      imageUrl: "https://pub-94dc47df391c4556bac5370df0514d7d.r2.dev/guy2.jpg",
+      title: "Managing Partner",
+      imageUrl: "/images/people/0K6A0550.JPG",
     },
     {
-      name: "Ben Kuria",
+      name: "Eric Kuria",
+      title: "Technical Director Partner",
+      imageUrl: "/images/people/0K6A0443.JPG",
+    },
+    {
+      name: "Grace Wanjiku",
+      title: "Graduate Architect",
+      imageUrl: "/images/people/0K6A0453.JPG",
+    },
+    {
+      name: "Paul Kamau",
+      title: "Interior Designer",
+      imageUrl: "/images/people/0K6A0463.JPG",
+    },
+    {
+      name: "Henry Njuguna",
       title: "Architect",
-      imageUrl: "https://pub-94dc47df391c4556bac5370df0514d7d.r2.dev/guy1.jpg",
+      imageUrl: "/images/people/0K6A0463.JPG",
     },
     {
-      name: "Kaimuri Munene",
-      title: "Communications Director",
-      imageUrl: "https://pub-94dc47df391c4556bac5370df0514d7d.r2.dev/guy3.jpg",
+      name: "Elizabeth",
+      title: "Office Admin",
+      imageUrl: "/images/people/0K6A0427.JPG",
+    },
+    {
+      name: "Ann",
+      title: "Office Assistant",
+      imageUrl: "/images/people/0K6A0476.JPG",
     },
   ];
+
+  const containerVariants = {
+    hidden: { opacity: 1 },
+    visible: {
+      opacity: 1,
+      transition: {
+        delayChildren: 0.3,
+        staggerChildren: 0.2,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+    },
+  };
 
   return (
     <>
       {/* Hero Section */}
-      <div className="relative h-64 bg-gray-800">
-        <Image
-          src="/placeholder.svg?height=256&width=1200"
-          alt="Architecture background"
-          layout="fill"
-          objectFit="cover"
-          className="opacity-50"
-        />
+      <div className="h-24 my-8 bg-very-dark-blue flex items-center justify-center ">
         <h1
-          className={`absolute inset-0 flex items-center justify-center text-4xl font-bold text-white ${poppins.className}`}
+          className={`flex items-center justify-center text-4xl font-bold text-white ${poppins.className}`}
         >
           ABOUT US
         </h1>
@@ -74,18 +114,18 @@ const About = () => {
           </div>
           <div className="md:w-1/2 space-y-4">
             <Image
-              src="/placeholder.svg?height=300&width=600"
-              alt="Building 1"
-              width={600}
-              height={300}
-              className="rounded-lg"
-            />
-            <Image
-              src="/placeholder.svg?height=300&width=600"
+              src="/images/20190118-George Padmore-_EJP6798-HDR.jpg"
               alt="Building 2"
               width={600}
               height={300}
-              className="rounded-lg"
+              className="rounded-md"
+            />
+            <Image
+              src="/images/0K6A0543.JPG"
+              alt="Building 1"
+              width={600}
+              height={300}
+              className="rounded-md"
             />
           </div>
         </div>
@@ -120,10 +160,11 @@ const About = () => {
         <div className="flex flex-col md:flex-row gap-8 items-center">
           <div className="md:w-1/2">
             <Image
-              src="/placeholder.svg?height=400&width=400"
+              src="/images/0K6A0488.JPG"
               alt="3D Building Model"
-              width={400}
+              width={800}
               height={400}
+              className="rounded-md"
             />
           </div>
           <div className="md:w-1/2">
@@ -168,17 +209,23 @@ const About = () => {
 
       {/* Team Section */}
       <div className="bg-gray-100 py-12">
-        <div className="container mx-auto max-w-6xl px-4">
+        <div className="container mx-auto max-w-8xl px-4">
           <h2
             className={`text-4xl font-bold text-center mb-10 uppercase ${poppins.className}`}
           >
             Meet the team
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <motion.div
+            variants={containerVariants}
+            initial="hidden"
+            animate="visible"
+            className="grid grid-cols-1 md:grid-cols-4 gap-8"
+          >
             {teamMembers.map((person, index) => (
-              <div
+              <motion.div
+                variants={itemVariants}
                 key={index}
-                className="flex flex-col items-center transform hover:scale-105 transition duration-300"
+                className="flex flex-col items-center transform hover:scale-105 transition duration-300 mb-5"
               >
                 <ImageContainer>
                   <Image
@@ -192,9 +239,9 @@ const About = () => {
                   {person.name}
                 </h3>
                 <p className="text-mustard-yellow">{person.title}</p>
-              </div>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
       </div>
     </>
