@@ -1,34 +1,40 @@
 import { LuMapPin, LuPhoneCall, LuMail, LuClock4 } from "react-icons/lu";
-import Image from "next/image";
+import Logo from "./Logo";
 
 const Footer = () => {
   return (
-    <footer className="bg-very-dark-blue text-gray-300 py-12">
-      <div className="container mx-auto px-4">
+    <footer className="bg-very-dark-blue text-gray-200 py-12">
+      <div className="container mx-auto px-4 max-w-7xl">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
-          <div className="flex items-center space-x-2">
-            <LuMapPin className="w-5 h-5" />
-            <div>
+          <div className="flex flex-col items-center space-x-2">
+            <LuMapPin className="text-4xl mb-4" />
+            <div className="text-center">
               <p>4th Floor</p>
               <p>George Padmore Ridge Building</p>
               <p>George Padmore Rd</p>
               <p>Nairobi, Kenya</p>
             </div>
           </div>
-          <div className="flex items-center space-x-2">
-            <LuPhoneCall className="w-5 h-5" />
-            <div>
-              <p>(+254) 202 010 348</p>
-              <p>(+254) 720 239 456 782</p>
+          <div className="flex flex-col items-center space-x-2">
+            <LuPhoneCall className="text-4xl mb-4" />
+            <div className="text-center">
+              <a href="tel:+254202010348" className="block">
+                (+254) 202 010 348
+              </a>
+              <a href="tel:+254720239456782" className="block">
+                (+254) 720 239 456 782
+              </a>
             </div>
           </div>
-          <div className="flex items-center space-x-2">
-            <LuMail className="w-5 h-5" />
-            <p>info@jawkimarchitects.com</p>
+          <div className="flex flex-col items-center space-x-2">
+            <LuMail className="text-4xl mb-4" />
+            <a href="mailto:info@jawkimarchitects.com" className="text-center">
+              info@jawkimarchitects.com
+            </a>
           </div>
-          <div className="flex items-center space-x-2">
-            <LuClock4 className="w-5 h-5" />
-            <div>
+          <div className="flex flex-col items-center space-x-2">
+            <LuClock4 className="text-4xl mb-4" />
+            <div className="text-center">
               <p>Mon - Fri : 9:00 AM - 5:00PM</p>
               <p>Sat 9:00 AM - 2:00PM</p>
             </div>
@@ -37,12 +43,7 @@ const Footer = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 border-t border-gray-800 pt-8">
           <div>
-            <Image
-              src="https://pub-94dc47df391c4556bac5370df0514d7d.r2.dev/jawkim-logo.png"
-              alt="Jawkim Architects"
-              width={200}
-              height={100}
-            />
+            <Logo />
             <div className="flex space-x-4 mt-4">
               <a href="#" className="text-gray-400 hover:text-white">
                 <span className="sr-only">Facebook</span>
@@ -93,11 +94,11 @@ const Footer = () => {
               Our Services
             </h3>
             <ul className="space-y-2">
-              <li>Architecture</li>
-              <li>Construction</li>
+              <li>Master Planning</li>
+              <li>Architectural Design</li>
               <li>Interior Design</li>
-              <li>Exterior Design</li>
-              <li>Repairing</li>
+              <li>Project Management</li>
+              <li>Project Planning</li>
             </ul>
           </div>
 
