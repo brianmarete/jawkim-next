@@ -2,24 +2,21 @@
 
 import { LuMapPin, LuPhone, LuMail } from "react-icons/lu";
 import { AdvancedMarker, APIProvider, Map } from "@vis.gl/react-google-maps";
-
+import { poppins } from "../ui/fonts";
 const Contact = () => {
   const markerPosition = { lat: -1.2964734, lng: 36.7899051 };
 
   return (
-    <div className="flex flex-col min-h-screen">
-      <header
-        className="relative h-64 bg-cover bg-center"
-        style={{
-          backgroundImage: "url('/placeholder.svg?height=256&width=1024')",
-        }}
-      >
-        <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-          <h1 className="text-4xl font-bold text-white">CONTACT US</h1>
-        </div>
-      </header>
+    <div className="flex flex-col min-h-screen text-gray-500">
+      <div className="h-24 my-8 flex items-center justify-center ">
+        <h1
+          className={`flex items-center justify-center text-4xl font-bold text-very-dark-blue ${poppins.className}`}
+        >
+          CONTACT US
+        </h1>
+      </div>
 
-      <main className="flex-grow bg-white p-8">
+      <main className="flex-gro p-8">
         <section className="container mx-auto max-w-6xl">
           <APIProvider
             apiKey={process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY as string}
@@ -36,33 +33,63 @@ const Contact = () => {
             </Map>
           </APIProvider>
         </section>
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8">
+        <div className="max-w-6xl my-5 mx-auto grid md:grid-cols-2 gap-8">
           <div>
-            <h2 className="text-2xl font-semibold mb-4">
+            <h2
+              className={`text-2xl font-bold mb-6 text-very-dark-blue ${poppins.className}`}
+            >
               GET IN TOUCH WITH US
             </h2>
-            <p className="text-gray-600 mb-6">
+            <p className="mb-6">
               Reach out to us for inquiries or to discuss how we can bring your
               architectural vision to life.
             </p>
-            <form className="space-y-4">
-              <input placeholder="YOUR NAME" />
-              <input type="email" placeholder="YOUR EMAIL" />
-              <input placeholder="PHONE" />
-              <input placeholder="SUBJECT" />
-              <textarea placeholder="YOUR MESSAGE" rows={4} />
-              <button type="submit">SEND MESSAGE</button>
+            <form>
+              <div className="grid grid-cols-1md:grid-cols-2 gap-4">
+                <input
+                  placeholder="YOUR NAME"
+                  className="p-2 border border-gray-300 outline-none focus:border-mustard-yellow bg-transparent"
+                />
+                <input
+                  type="email"
+                  placeholder="YOUR EMAIL"
+                  className="p-2 border border-gray-300 outline-none focus:border-mustard-yellow bg-transparent"
+                />
+                <input
+                  placeholder="PHONE"
+                  className="p-2 border border-gray-300 outline-none focus:border-mustard-yellow bg-transparent"
+                />
+                <input
+                  placeholder="SUBJECT"
+                  className="p-2 border border-gray-300 outline-none focus:border-mustard-yellow bg-transparent"
+                />
+                <textarea
+                  className="col-span-2 p-2 border border-gray-300 outline-none focus:border-mustard-yellow bg-transparent"
+                  placeholder="YOUR MESSAGE"
+                  rows={4}
+                />
+              </div>
+              <button
+                type="button"
+                className="mt-4 p-3 hover:bg-mustard-yellow hover:text-white border border-mustard-yellow text-mustard-yellow"
+              >
+                SEND MESSAGE
+              </button>
             </form>
           </div>
 
           <div>
-            <h2 className="text-2xl font-semibold mb-4">CONTACT INFORMATION</h2>
-            <div className="space-y-4">
+            <h2
+              className={`text-2xl font-bold mb-6 text-very-dark-blue ${poppins.className}`}
+            >
+              CONTACT INFORMATION
+            </h2>
+            <div className="space-y-8">
               <div className="flex items-start">
                 <LuMapPin className="w-6 h-6 text-yellow-500 mr-2 mt-1" />
                 <div>
                   <h3 className="font-semibold">Address</h3>
-                  <p className="text-gray-600">
+                  <p>
                     4th Floor, George Padmore Building
                     <br />
                     George Padmore Rd
@@ -75,7 +102,7 @@ const Contact = () => {
                 <LuPhone className="w-6 h-6 text-yellow-500 mr-2 mt-1" />
                 <div>
                   <h3 className="font-semibold">Call Us</h3>
-                  <p className="text-gray-600">
+                  <p>
                     +254 720 239 782
                     <br />
                     +254 20 2101348
@@ -86,7 +113,7 @@ const Contact = () => {
                 <LuMail className="w-6 h-6 text-yellow-500 mr-2 mt-1" />
                 <div>
                   <h3 className="font-semibold">Mail Us</h3>
-                  <p className="text-gray-600">info@jawkimarchitects.com</p>
+                  <p>info@jawkimarchitects.com</p>
                 </div>
               </div>
             </div>
