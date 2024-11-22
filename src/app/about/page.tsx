@@ -10,7 +10,7 @@ const About = () => {
     {
       name: "J W Kimani",
       title: "Founder/Chairman",
-      imageUrl: "/images/people/DSC_1778.jpg",
+      imageUrl: "/images/people/DSC_1778.png",
     },
     {
       name: "Gabriel Mwangi",
@@ -35,7 +35,12 @@ const About = () => {
     {
       name: "Henry Njuguna",
       title: "Architect",
-      imageUrl: "/images/people/0K6A0463.JPG",
+      imageUrl: "/images/people/Henry.jpg",
+    },
+    {
+      name: "Timothy",
+      title: "",
+      imageUrl: "/images/people/Timothy.jpg",
     },
     {
       name: "Elizabeth",
@@ -219,7 +224,7 @@ const About = () => {
             variants={containerVariants}
             initial="hidden"
             animate="visible"
-            className="grid grid-cols-1 md:grid-cols-4 gap-8"
+            className="grid grid-cols-1 md:grid-cols-3 gap-8"
           >
             {teamMembers.map((person, index) => (
               <motion.div
