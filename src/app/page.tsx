@@ -114,7 +114,7 @@ export default function Home() {
               alt="Modern house"
               width={500}
               height={300}
-              className="absolute right-0 -top-24 md:-top-32"
+              className="absolute right-0"
             />
           </div>
           <div className="flex flex-col justify-center h-[500px]">
@@ -136,41 +136,41 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 px-36 py-12 text-gray-600">
-          <div className="text-start">
-            <div className="flex justify-start mb-4">
+        <div className="flex flex-col md:flex-row md:flex-wrap md:justify-center px-36 py-12 text-gray-600">
+          <div className="w-1/3 mb-8 text-center">
+            <div className="flex justify-center mb-4">
               <PiShareNetworkLight className="text-7xl" />
             </div>
             <h3 className="text-xl font-semibold mb-2 uppercase">
               Master Planning
             </h3>
           </div>
-          <div className="text-start">
-            <div className="flex justify-start mb-4">
+          <div className="w-1/3 mb-8 text-center">
+            <div className="flex justify-center mb-4">
               <PiCompassTool className="text-7xl" />
             </div>
             <h3 className="text-xl font-semibold mb-2 uppercase">
               Architectural Design
             </h3>
           </div>
-          <div className="text-start">
-            <div className="flex justify-start mb-4">
+          <div className="w-1/3 mb-8 text-center">
+            <div className="flex justify-center mb-4">
               <LiaCouchSolid className="text-7xl" />
             </div>
             <h3 className="text-xl font-semibold mb-2 uppercase">
               Interior Design
             </h3>
           </div>
-          <div className="text-start">
-            <div className="flex justify-start mb-4">
+          <div className="w-1/3 mb-8 text-center">
+            <div className="flex justify-center mb-4">
               <BsFillPeopleFill className="text-7xl" />
             </div>
             <h3 className="text-xl font-semibold mb-2 uppercase">
               Project Management
             </h3>
           </div>
-          <div className="text-start">
-            <div className="flex justify-start mb-4">
+          <div className="w-1/3 mb-8 text-center">
+            <div className="flex justify-center mb-4">
               <LiaClipboardCheckSolid className="text-7xl" />
             </div>
             <h3 className="text-xl font-semibold mb-2 uppercase">
