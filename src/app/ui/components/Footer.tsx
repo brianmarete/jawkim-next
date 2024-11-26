@@ -1,7 +1,31 @@
 import { LuMapPin, LuPhoneCall, LuMail, LuClock4 } from "react-icons/lu";
 import Logo from "./Logo";
+import Link from "next/link";
 
 const Footer = () => {
+  const links = [
+    {
+      name: "Home",
+      href: "/",
+    },
+    {
+      name: "About us",
+      href: "/about",
+    },
+    {
+      name: "Services",
+      href: "/services",
+    },
+    {
+      name: "Blog",
+      href: "#",
+    },
+    {
+      name: "Contact us",
+      href: "/contact",
+    },
+  ];
+
   return (
     <footer className="bg-very-dark-blue text-gray-200 py-12">
       <div className="container mx-auto px-4 max-w-7xl">
@@ -41,7 +65,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 border-t border-gray-800 pt-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 border-t border-gray-800 pt-8">
           <div>
             <Logo />
             <div className="flex space-x-4 mt-4">
@@ -89,11 +113,11 @@ const Footer = () => {
             </div>
           </div>
 
-          <div>
+          <div className="text-end">
             <h3 className="text-lg font-semibold text-white mb-4">
-              Our Services
+              <Link href={"/services"}>Our Services</Link>
             </h3>
-            <ul className="space-y-2">
+            <ul className="space-y-2 text-sm">
               <li>Master Planning</li>
               <li>Architectural Design</li>
               <li>Interior Design</li>
@@ -153,24 +177,16 @@ const Footer = () => {
 
         <div className="mt-8 pt-8 border-t border-gray-800 flex flex-wrap justify-between items-center">
           <p>&copy; 2024 ALL RIGHTS RESERVED</p>
-          <nav className="flex space-x-4 text-sm">
-            <a href="#" className="hover:text-white">
-              HOME
-            </a>
-            <a href="#" className="hover:text-white">
-              SERVICES
-            </a>
-            {/*
-            TODO: show when terms & conditions is available
-            <a href="#" className="hover:text-white">
-              TERMS & CONDITION
-            </a>
-            <a href="#" className="hover:text-white">
-              PRIVACY POLICY
-            </a> */}
-            <a href="#" className="hover:text-white">
-              CONTACT US
-            </a>
+          <nav>
+            <ul className="flex space-x-4 text-sm">
+              {links.map((item, index) => (
+                <li key={index}>
+                  <Link href={item.href} className="hover:text-white uppercase">
+                    {item.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </nav>
         </div>
       </div>
