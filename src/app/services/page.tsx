@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { poppins } from "../ui/fonts";
-import { Portfolio } from "../ui/components/Portfolio";
+import Portfolio from "@/app/ui/components/Portfolio";
 import { PiCompassTool, PiShareNetworkLight } from "react-icons/pi";
 import { LiaClipboardCheckSolid, LiaCouchSolid } from "react-icons/lia";
 import { BsFillPeopleFill } from "react-icons/bs";

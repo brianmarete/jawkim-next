@@ -5,12 +5,12 @@ import { poppins } from "@/app/ui/fonts";
 import Hero from "@/app/ui/components/Hero";
 import StyledButton from "@/app/ui/components/StyledButton";
 import ImageContainer from "@/app/ui/components/ImageContainer";
+import Portfolio from "@/app/ui/components/Portfolio";
 
 import { PiShareNetworkLight, PiCompassTool } from "react-icons/pi";
 import { LiaCouchSolid, LiaClipboardCheckSolid } from "react-icons/lia";
 import { BsFillPeopleFill } from "react-icons/bs";
 import { motion } from "framer-motion";
-import { Portfolio } from "./ui/components/Portfolio";
 
 export default function Home() {
   return (
@@ -194,7 +194,7 @@ export default function Home() {
       >
         <div className="container mx-auto px-4">
           <h2
-            className={`text-6xl text-center font-bold mb-6 text-gray-800 ${poppins.className}`}
+            className={`text-6xl text-center font-bold text-gray-800 ${poppins.className}`}
           >
             OUR WORK
           </h2>

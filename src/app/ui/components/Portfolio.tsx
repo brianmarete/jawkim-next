@@ -1,118 +1,113 @@
-"use client";
-
-import { images } from "@/app/images";
-import { useState } from "react";
-import { Gallery } from "react-grid-gallery";
-import Lightbox from "yet-another-react-lightbox";
+import React from "react";
 import {
-  Fullscreen,
-  Thumbnails,
-  Zoom,
-} from "yet-another-react-lightbox/plugins";
-import "yet-another-react-lightbox/styles.css";
-import "yet-another-react-lightbox/plugins/captions.css";
-import "yet-another-react-lightbox/plugins/thumbnails.css";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+import Link from "next/link";
 
-export const Portfolio = () => {
-  const [index, setIndex] = useState(-1);
-
-  const currentImage = images[index];
-  // const nextIndex = (index + 1) % images.length;
-  // const nextImage = images[nextIndex] || currentImage;
-  // const prevIndex = (index + images.length - 1) % images.length;
-  // const prevImage = images[prevIndex] || currentImage;
-
-  const handleClick = (index: number) => setIndex(index);
-  // const handleClose = () => setIndex(-1);
-  // const handleMovePrev = () => setIndex(prevIndex);
-  // const handleMoveNext = () => setIndex(nextIndex);
-
+const Card = ({ card }: { card: CardType }) => {
   return (
-    <div>
-      <Tabs defaultValue="residential" className="w-full">
-        <TabsList className="flex justify-between overflow-x-scroll overflow-y-hidden h-16  bg-inherit mb-2 md:overflow-auto ">
-          <TabsTrigger className="TabsTrigger" value="residential">
-            Residential
-          </TabsTrigger>
-          <TabsTrigger className="TabsTrigger" value="commercial">
-            Commercial
-          </TabsTrigger>
-          <TabsTrigger className="TabsTrigger" value="interiors">
-            Interiors
-          </TabsTrigger>
-          <TabsTrigger className="TabsTrigger" value="educational">
-            Educational
-          </TabsTrigger>
-          <TabsTrigger className="TabsTrigger" value="hospitality">
-            Hospitality
-          </TabsTrigger>
-          <TabsTrigger className="TabsTrigger" value="industrial">
-            Industrial
-          </TabsTrigger>
-          <TabsTrigger className="TabsTrigger" value="healthcare">
-            Healthcare
-          </TabsTrigger>
-        </TabsList>
-        <TabsContent value="residential" className="max-w-7xl mx-auto">
-          <Gallery
-            images={images}
-            onClick={handleClick}
-            enableImageSelection={false}
-          />
-        </TabsContent>
-        <TabsContent value="commercial">
-          <Gallery
-            images={images}
-            onClick={handleClick}
-            enableImageSelection={false}
-          />
-        </TabsContent>
-        <TabsContent value="interiors">
-          <Gallery
-            images={images}
-            onClick={handleClick}
-            enableImageSelection={false}
-          />
-        </TabsContent>
-        <TabsContent value="educational">
-          <Gallery
-            images={images}
-            onClick={handleClick}
-            enableImageSelection={false}
-          />
-        </TabsContent>
-        <TabsContent value="hospitality">
-          <Gallery
-            images={images}
-            onClick={handleClick}
-            enableImageSelection={false}
-          />
-        </TabsContent>
-        <TabsContent value="industrial">
-          <Gallery
-            images={images}
-            onClick={handleClick}
-            enableImageSelection={false}
-          />
-        </TabsContent>
-        <TabsContent value="healthcare">
-          <Gallery
-            images={images}
-            onClick={handleClick}
-            enableImageSelection={false}
-          />
-        </TabsContent>
-      </Tabs>
-      {!!currentImage && (
-        <Lightbox
-          plugins={[Fullscreen, Zoom, Thumbnails]}
-          index={index}
-          open={index >= 0}
-          close={() => setIndex(-1)}
-          slides={images}
-        />
-      )}
+    <div key={card.id} className="group relative h-96 w-96 overflow-hidden">
+      <div className="relative after:absolute after:w-full after:h-full after:left-0 after:top-0 after:bg-slate-950/50 h-full w-full after:backdrop-opacity-10 ">
+        <div
+          style={{
+            backgroundImage: `url(${card.url})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+          className="absolute inset-0 z-0 transition-transform duration-300 group-hover:scale-110"
+        ></div>
+      </div>
+      <div className="absolute inset-0 z-10 grid place-content-center">
+        <p className="p-8 text-3xl font-black uppercase text-white">
+          {card.title}
+        </p>
+      </div>
     </div>
   );
 };
+
+type CardType = {
+  href: string;
+  url: string;
+  title: string;
+  id: number;
+};
+
+const cards: CardType[] = [
+  {
+    href: "#",
+    url: "/images/residential/cover.jpg",
+    title: "Residential",
+    id: 1,
+  },
+  {
+    href: "#",
+    url: "/images/commercial/cover.jpg",
+    title: "Commercial",
+    id: 2,
+  },
+  {
+    href: "#",
+    url: "/images/interiors/cover.jpg",
+    title: "Interiors",
+    id: 3,
+  },
+  {
+    href: "#",
+    url: "/images/hospitality/cover.jpg",
+    title: "Hospitality",
+    id: 5,
+  },
+  {
+    href: "#",
+    url: "https://pub-94dc47df391c4556bac5370df0514d7d.r2.dev/20190118-Uthiru-_EJP7135-HDR.jpg",
+    title: "Educational",
+    id: 4,
+  },
+  {
+    href: "#",
+    url: "https://pub-94dc47df391c4556bac5370df0514d7d.r2.dev/20190118-Uthiru-_EJP7135-HDR.jpg",
+    title: "Industrial",
+    id: 6,
+  },
+  {
+    href: "#",
+    url: "https://pub-94dc47df391c4556bac5370df0514d7d.r2.dev/20190118-Uthiru-_EJP7135-HDR.jpg",
+    title: "Healthcare",
+    id: 7,
+  },
+];
+
+const Portfolio = () => {
+  return (
+    <Carousel
+      opts={{
+        align: "start",
+      }}
+      className="w-full max-w-7xl mx-auto my-12"
+    >
+      <CarouselContent className="-ml-1">
+        {cards.map((card) => {
+          return (
+            <CarouselItem
+              key={card.id}
+              className="pl-1 md:basis-1/2 lg:basis-1/3"
+            >
+              <Link href={card.href}>
+                <Card card={card} />
+              </Link>
+            </CarouselItem>
+          );
+        })}
+      </CarouselContent>
+      <CarouselPrevious />
+      <CarouselNext />
+    </Carousel>
+  );
+};
+
+export default Portfolio;
