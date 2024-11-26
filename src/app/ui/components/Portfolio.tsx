@@ -39,43 +39,43 @@ type CardType = {
 
 const cards: CardType[] = [
   {
-    href: "#",
+    href: "/portfolio/residential",
     url: "/images/residential/cover.jpg",
     title: "Residential",
     id: 1,
   },
   {
-    href: "#",
+    href: "/portfolio/commercial",
     url: "/images/commercial/cover.jpg",
     title: "Commercial",
     id: 2,
   },
   {
-    href: "#",
+    href: "/portfolio/interiors",
     url: "/images/interiors/cover.jpg",
     title: "Interiors",
     id: 3,
   },
   {
-    href: "#",
+    href: "/portfolio/hospitality",
     url: "/images/hospitality/cover.jpg",
     title: "Hospitality",
     id: 5,
   },
   {
-    href: "#",
+    href: "/portfolio/educational",
     url: "https://pub-94dc47df391c4556bac5370df0514d7d.r2.dev/20190118-Uthiru-_EJP7135-HDR.jpg",
     title: "Educational",
     id: 4,
   },
   {
-    href: "#",
+    href: "/portfolio/industrial",
     url: "https://pub-94dc47df391c4556bac5370df0514d7d.r2.dev/20190118-Uthiru-_EJP7135-HDR.jpg",
     title: "Industrial",
     id: 6,
   },
   {
-    href: "#",
+    href: "/portfolio/healthcare",
     url: "https://pub-94dc47df391c4556bac5370df0514d7d.r2.dev/20190118-Uthiru-_EJP7135-HDR.jpg",
     title: "Healthcare",
     id: 7,
