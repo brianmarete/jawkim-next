@@ -124,10 +124,11 @@ export default function Home() {
               OUR SERVICES
             </h2>
             <p className="mb-6 w-3/4 leading-8 text-gray-600">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. At ab
-              repudiandae, perferendis quae odit debitis ullam totam obcaecati
-              corporis atque illum dolore libero iure quo perspiciatis quis
-              fugiat, facilis officiis!
+              Explore our comprehensive suite of services, designed to support
+              every phase of your project with precision and professionalism.
+              From strategic master planning to meticulous project management,
+              our team delivers results that align with your vision and meet the
+              highest standards of excellence.
             </p>
             <StyledButton route="/services" type="secondary">
               Read more

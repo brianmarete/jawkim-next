@@ -31,10 +31,12 @@ const Services = () => {
                 Master Planning
               </h3>
               <p className="text-gray-200 text-sm max-w-lg">
-                Our master planning services create comprehensive, visionary
-                roadmaps for large-scale developments. We integrate sustainable
-                design principles, site analysis, and strategic land use to
-                craft cohesive environments that inspire and endure.
+                Our master planning services focus on creating a
+                well-thought-out framework for large-scale developments. We look
+                at the big picture—analyzing site characteristics, environmental
+                impact, infrastructure needs, and community integration. This
+                holistic approach ensures a sustainable, functional, and
+                adaptable plan that guides growth and development over time.
               </p>
             </div>
             <div className="text-start">
@@ -45,10 +47,12 @@ const Services = () => {
                 Architectural Design
               </h3>
               <p className="text-gray-200 text-sm max-w-lg">
-                From concept to construction, our architectural design team
-                delivers innovative, functional, and aesthetically striking
-                buildings. We blend creativity with technical precision to
-                transform your vision into dynamic, real-world spaces.
+                In architectural design, we bring your vision to life with
+                creativity and precision. From concept to construction, we
+                create buildings that are both aesthetically captivating and
+                highly functional, ensuring that each design complements its
+                surroundings and meets the unique needs of the space and its
+                users.
               </p>
             </div>
             <div className="text-start">
@@ -59,10 +63,11 @@ const Services = () => {
                 Interior Design
               </h3>
               <p className="text-gray-200 text-sm max-w-lg">
-                Our interior design services focus on creating spaces that are
-                not only beautiful but also functional and tailored to your
-                lifestyle or business needs. We consider every detail to ensure
-                a harmonious and inspiring interior environment.
+                Our interior design services transform spaces to enhance
+                comfort, functionality, and aesthetic appeal. We work closely
+                with clients to craft interiors that reflect their identity,
+                using materials, textures, and layouts that create welcoming,
+                efficient, and inspiring environments.
               </p>
             </div>
             <div className="text-start">
@@ -73,11 +78,11 @@ const Services = () => {
                 Project Management
               </h3>
               <p className="text-gray-200 text-sm max-w-lg">
-                We offer complete project management solutions to streamline the
-                construction process, ensuring projects stay on time, within
-                budget, and aligned with your vision. Our team handles every
-                phase from planning to execution with precision and
-                professionalism.
+                Our project management team ensures each project runs smoothly,
+                on time, and within budget. We coordinate every phase, from
+                planning to completion, managing resources, timelines, and
+                quality standards to deliver a seamless experience and a
+                successful <strong>project outcome</strong>.
               </p>
             </div>
             <div className="text-start">
@@ -88,11 +93,11 @@ const Services = () => {
                 Project Planning
               </h3>
               <p className="text-gray-200 text-sm max-w-lg">
-                Our project planning services ensure every detail is
-                meticulously considered, providing a clear path from concept to
-                completion. We balance budget, schedule, and quality to deliver
-                successful projects with minimized risks and maximized
-                efficiency.
+                Effective project planning is the foundation of every successful
+                project. We develop detailed roadmaps that address every
+                logistical, technical, and regulatory need. Our planning process
+                anticipates challenges and optimizes resources, setting the
+                project up for efficient and successful execution.
               </p>
             </div>
           </div>
