@@ -22,7 +22,7 @@ const Hero = () => {
         className="absolute inset-0 flex flex-col justify-center items-center text-white "
       >
         <span className="bg-mustard-yellow text-gray-900 px-4 py-2 mb-4 text-sm font-semibold">
-          WE ARE JAWKIM ARCHITECTS
+          WE ARE JAWKIM CONSULTING ARCHITECTS LLP
         </span>
         <h1
           className={`text-6xl font-bold mb-4 text-center ${poppins.className}`}
