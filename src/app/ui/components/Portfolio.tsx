@@ -62,24 +62,24 @@ const cards: CardType[] = [
     title: "Hospitality",
     id: 5,
   },
-  {
-    href: "/portfolio/educational",
-    url: "https://pub-94dc47df391c4556bac5370df0514d7d.r2.dev/20190118-Uthiru-_EJP7135-HDR.jpg",
-    title: "Educational",
-    id: 4,
-  },
-  {
-    href: "/portfolio/industrial",
-    url: "https://pub-94dc47df391c4556bac5370df0514d7d.r2.dev/20190118-Uthiru-_EJP7135-HDR.jpg",
-    title: "Industrial",
-    id: 6,
-  },
-  {
-    href: "/portfolio/healthcare",
-    url: "https://pub-94dc47df391c4556bac5370df0514d7d.r2.dev/20190118-Uthiru-_EJP7135-HDR.jpg",
-    title: "Healthcare",
-    id: 7,
-  },
+  // {
+  //   href: "/portfolio/educational",
+  //   url: "https://pub-94dc47df391c4556bac5370df0514d7d.r2.dev/20190118-Uthiru-_EJP7135-HDR.jpg",
+  //   title: "Educational",
+  //   id: 4,
+  // },
+  // {
+  //   href: "/portfolio/industrial",
+  //   url: "https://pub-94dc47df391c4556bac5370df0514d7d.r2.dev/20190118-Uthiru-_EJP7135-HDR.jpg",
+  //   title: "Industrial",
+  //   id: 6,
+  // },
+  // {
+  //   href: "/portfolio/healthcare",
+  //   url: "https://pub-94dc47df391c4556bac5370df0514d7d.r2.dev/20190118-Uthiru-_EJP7135-HDR.jpg",
+  //   title: "Healthcare",
+  //   id: 7,
+  // },
 ];
 
 const Portfolio = () => {

@@ -77,7 +77,7 @@ const Menu = () => {
             </li>
           </ul>
           <Link
-            href="#"
+            href="/contact"
             className="bg-mustard-yellow text-zinc-100 px-4 py-2 my-3 font-semibold hover:bg-yellow-500 transition-colors uppercase text-xs"
           >
             Get in touch
