@@ -1,16 +1,11 @@
 import React from "react";
-import Image from "next/image";
 import { poppins } from "../ui/fonts";
 import Portfolio from "@/app/ui/components/Portfolio";
-import { PiCompassTool, PiShareNetworkLight } from "react-icons/pi";
-import { LiaClipboardCheckSolid, LiaCouchSolid } from "react-icons/lia";
-import { BsFillPeopleFill } from "react-icons/bs";
+import ServicesCarousel from "./ServicesCarousel";
 
 const Services = () => {
   return (
     <div>
-      {/* Hero Section */}
-
       <div className="h-24 my-8 flex items-center justify-center ">
         <h1
           className={`flex items-center justify-center text-4xl font-bold text-very-dark-blue ${poppins.className}`}
@@ -19,113 +14,7 @@ const Services = () => {
         </h1>
       </div>
 
-      {/* Services Section */}
-      <section className="py-16 bg-very-dark-blue text-white">
-        <div className="container mx-auto px-4 flex flex-wrap max-w-7xl">
-          <div className="w-full lg:w-1/2 space-y-8">
-            <div className="text-start">
-              <div className="flex justify-start mb-4">
-                <PiShareNetworkLight className="text-7xl" />
-              </div>
-              <h3 className="text-xl font-semibold mb-2 uppercase">
-                Master Planning
-              </h3>
-              <p className="text-gray-200 text-sm max-w-lg">
-                Our master planning services focus on creating a
-                well-thought-out framework for large-scale developments. We look
-                at the big picture—analyzing site characteristics, environmental
-                impact, infrastructure needs, and community integration. This
-                holistic approach ensures a sustainable, functional, and
-                adaptable plan that guides growth and development over time.
-              </p>
-            </div>
-            <div className="text-start">
-              <div className="flex justify-start mb-4">
-                <PiCompassTool className="text-7xl" />
-              </div>
-              <h3 className="text-xl font-semibold mb-2 uppercase">
-                Architectural Design
-              </h3>
-              <p className="text-gray-200 text-sm max-w-lg">
-                In architectural design, we bring your vision to life with
-                creativity and precision. From concept to construction, we
-                create buildings that are both aesthetically captivating and
-                highly functional, ensuring that each design complements its
-                surroundings and meets the unique needs of the space and its
-                users.
-              </p>
-            </div>
-            <div className="text-start">
-              <div className="flex justify-start mb-4">
-                <LiaCouchSolid className="text-7xl" />
-              </div>
-              <h3 className="text-xl font-semibold mb-2 uppercase">
-                Interior Design
-              </h3>
-              <p className="text-gray-200 text-sm max-w-lg">
-                Our interior design services transform spaces to enhance
-                comfort, functionality, and aesthetic appeal. We work closely
-                with clients to craft interiors that reflect their identity,
-                using materials, textures, and layouts that create welcoming,
-                efficient, and inspiring environments.
-              </p>
-            </div>
-            <div className="text-start">
-              <div className="flex justify-start mb-4">
-                <BsFillPeopleFill className="text-7xl" />
-              </div>
-              <h3 className="text-xl font-semibold mb-2 uppercase">
-                Project Management
-              </h3>
-              <p className="text-gray-200 text-sm max-w-lg">
-                Our project management team ensures each project runs smoothly,
-                on time, and within budget. We coordinate every phase, from
-                planning to completion, managing resources, timelines, and
-                quality standards to deliver a seamless experience and a
-                successful <strong>project outcome</strong>.
-              </p>
-            </div>
-            <div className="text-start">
-              <div className="flex justify-start mb-4">
-                <LiaClipboardCheckSolid className="text-7xl" />
-              </div>
-              <h3 className="text-xl font-semibold mb-2 uppercase">
-                Project Planning
-              </h3>
-              <p className="text-gray-200 text-sm max-w-lg">
-                Effective project planning is the foundation of every successful
-                project. We develop detailed roadmaps that address every
-                logistical, technical, and regulatory need. Our planning process
-                anticipates challenges and optimizes resources, setting the
-                project up for efficient and successful execution.
-              </p>
-            </div>
-          </div>
-          <div className="w-full lg:w-1/2 mt-8 lg:mt-0">
-            <Image
-              src="/images/render01.jpg"
-              alt="Building design"
-              width={1000}
-              height={600}
-              className="rounded-sm m-5"
-            />
-            <Image
-              src="/images/render02.jpg"
-              alt="Building design"
-              width={1000}
-              height={600}
-              className="rounded-sm m-5"
-            />
-            <Image
-              src="/images/render03.jpg"
-              alt="Building design"
-              width={1000}
-              height={600}
-              className="rounded-sm m-5"
-            />
-          </div>
-        </div>
-      </section>
+      <ServicesCarousel />
 
       {/* Portfolio Section */}
       <div className="container mx-auto my-16 px-4">
