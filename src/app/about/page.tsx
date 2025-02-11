@@ -34,12 +34,12 @@ const About = () => {
     },
     {
       name: "Henry Njuguna",
-      title: "Architect",
+      title: "Senior Technician",
       imageUrl: "/images/people/Henry.jpg",
     },
     {
       name: "Timothy",
-      title: "",
+      title: "Assistant Architect",
       imageUrl: "/images/people/Timothy.jpg",
     },
     {
@@ -149,7 +149,7 @@ const About = () => {
               <p className="text-sm uppercase">Happy Clients</p>
             </div>
             <div>
-              <h3 className="text-4xl font-bold">3+</h3>
+              <h3 className="text-4xl font-bold">27+</h3>
               <p className="text-sm uppercase">Years Experience</p>
             </div>
             <div>
