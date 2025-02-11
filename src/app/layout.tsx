@@ -3,6 +3,7 @@ import "./globals.css";
 import Menu from "./ui/components/Menu";
 import Footer from "./ui/components/Footer";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import { workSans } from "./ui/fonts";
 
 export const metadata: Metadata = {
@@ -25,6 +26,7 @@ export default function RootLayout({
         </div>
         <Footer />
         <SpeedInsights />
+        <GoogleAnalytics gaId="G-RE38P7ES7C" />
       </body>
     </html>
   );
