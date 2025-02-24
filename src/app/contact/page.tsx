@@ -1,11 +1,13 @@
-"use client";
-
 import { LuMapPin, LuPhone, LuMail } from "react-icons/lu";
-import { AdvancedMarker, APIProvider, Map } from "@vis.gl/react-google-maps";
 import { poppins } from "../ui/fonts";
-const Contact = () => {
-  const markerPosition = { lat: -1.2964734, lng: 36.7899051 };
+import { Metadata } from "next";
+import Location from "../ui/components/Location";
 
+export const metadata: Metadata = {
+  title: "Contact Us",
+};
+
+const Contact = () => {
   return (
     <div className="flex flex-col min-h-screen text-gray-500">
       <div className="h-24 my-8 flex items-center justify-center ">
@@ -17,22 +19,7 @@ const Contact = () => {
       </div>
 
       <main className="flex-gro p-8">
-        <section className="container mx-auto max-w-6xl">
-          <APIProvider
-            apiKey={process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY as string}
-          >
-            <Map
-              style={{ width: "100%", height: "400px" }}
-              defaultCenter={markerPosition}
-              defaultZoom={17}
-              gestureHandling={"greedy"}
-              disableDefaultUI={true}
-              mapId={process.env.NEXT_PUBLIC_MAP_ID}
-            >
-              <AdvancedMarker position={markerPosition} />
-            </Map>
-          </APIProvider>
-        </section>
+        <Location />
         <div className="max-w-6xl my-5 mx-auto grid md:grid-cols-2 gap-8">
           <div>
             <h2

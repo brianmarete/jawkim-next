@@ -7,9 +7,15 @@ import { GoogleAnalytics } from "@next/third-parties/google";
 import { workSans } from "./ui/fonts";
 
 export const metadata: Metadata = {
-  title: "Jawkim Architects",
+  title: {
+    template: "%s | Jawkim Architects",
+    default: "Jawkim Architects",
+  },
   description:
     "Discover innovative architecture, master planning, and interior design services. Our expert team delivers creative solutions for residential, commercial, and large-scale projects, from concept to completion.",
+  other: {
+    "google-site-verification": "IXtSaEO4nIMbBQDEnO7XHI4KmYeBEGjkkauRrZqP9I8",
+  },
 };
 
 export default function RootLayout({

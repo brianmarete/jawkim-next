@@ -2,6 +2,11 @@ import React from "react";
 import { poppins } from "../ui/fonts";
 import Portfolio from "@/app/ui/components/Portfolio";
 import ServicesCarousel from "./ServicesCarousel";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Our Services",
+};
 
 const Services = () => {
   return (
